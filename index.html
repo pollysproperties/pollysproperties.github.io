@@ -1,0 +1,119 @@
+
+	<!-- link to main style sheet. -->
+	<link rel="stylesheet" type="text/css" href="./styles/style.css">
+
+	<title>Polly's Properties LTD</title>
+
+	<!-- Cater for mobile devices-->
+	<meta name="viewport" content="width=device-width">
+
+</head>
+<body id="body">
+
+	<!-- Header-->
+   <div id="header">
+
+			<!--background-image: linear-gradient(to bottom right, yellow 5%,#006994 20%, #006994 20%)">-->
+			<!-- header -->
+			<img class="logo" src=".\images\Logo Final 2600px.png" alt="Logo" style="width:200px;">
+
+			<!-- main links -->
+				<!-- Fture links go here. -->
+			<!-- End main links -->
+
+			<hr class="divider" />
+	</div>
+
+	<!-- Main-->
+	<div id="content">
+
+			  <!--Left content-->
+			  <div id="leftContent">
+						<h3 class="heading">Welcome to Pollys Properties where you can stay at our getaway property or contact us to manage yours.</h3>
+
+						<hr class="divider" />
+
+						<p class="paragraph">After the succcess of overseeing our own seaside guest house, we have branch out to help you in order to release the stress, pressure and responsibility of your own B&B adventure from marketting to admin, arranging cleaner and promotions.
+
+						<br />
+						<br />
+						Contact us
+						<br >Email: <a href="mailTo:info@pollysproperties.co.uk">info@pollysproperties.co.uk</a></p>
+		 	  </div>
+
+			  <!--Center line-->
+			  <div id="centerLine"></div>
+
+			  <!--Right content-->
+			  <div id="rightContent">
+
+							<p class="paragraph">To stay at our own Airbnb please visit our <a class="service" href="https://www.airbnb.co.uk/rooms/39214278?adults=7&check_in=2020-02-24&check_out=2020-02-25&source_impression_id=p3_1576003533_oSnjreMq64oVnCOo">Brighton Bed and Breakfast</a></p>
+
+							<!-- Gallery -->
+							<img name="slide" id="slide" />
+							<!-- Gallery -->
+
+							<!-- Social media links for B&B -->
+							<br />
+							<br />
+							<a id="instagram" class="social" href="https://www.instagram.com/pollys_properties/?hl=en">Instagram</a>
+
+							<a id="facebook" class="social" href="https://www.facebook.com/pollysproperties">Facebook </a>
+			  </div>
+
+
+	</div>
+	<!-- Main end-->
+
+
+
+	 <!-- Footer -->
+	 <div id="footer">
+		 <hr class="divider" />
+		 <p>38 Westgate, Chichester, West Sussex, PO19 3EU Registered in the UK. No. 12146906.</p>
+	</div>
+
+
+	<!-- Javascript -->
+	<script type="text/javascript">
+
+		// Script for picture rotation (airbnb).
+		var i = 0; 			// Start Point
+		var images = [];	// Images Array
+		var time = 5000;	// Time Between Switch
+
+		// Image List
+		images[0] = "./images/front.jpg";
+		images[1] = "./images/Living area.jpg";
+		images[2] = "./images/Kitchen 1.jpg";
+		images[3] = "./images/Master1.jpg";
+		images[4] = "./images/Day room 2.jpg";
+		images[5] = "./images/room 3.jpg";
+		images[6] = "./images/garden1.jpg";
+
+		// Change Image
+		function changeImg(){
+			document.slide.src = images[i];
+
+			// Check If Index Is Under Max
+			if(i < images.length - 1){
+			  // Add 1 to Index
+			  i++;
+			} else {
+				// Reset Back To O
+				i = 0;
+			}
+
+			// Run function every x seconds
+			setTimeout("changeImg()", time);
+		}
+
+		// Run function when page loads
+		window.onload=changeImg;
+		// End of Script for picture rotation (airbnb).
+	</script>
+	<!-- end of Javascript-->
+
+
+</body>
+</html>

@@ -78,7 +78,6 @@ a:active { color: #787878;}
 	width: auto;
 }
 
-
 /*Mobile devices*/
 @media only screen and (max-device-width: 480px) {
 
@@ -165,5 +164,5 @@ a:active { color: #787878;}
 		bottom: 0%;
 		left: 50%;
 	}
-	
+
 }

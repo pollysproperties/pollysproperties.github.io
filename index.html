@@ -48,7 +48,15 @@
 			  <!--Right content-->
 			  <div id="rightContent">
 
-							<p class="paragraph">To stay at our own Airbnb please visit our <a class="service" href="https://www.airbnb.co.uk/rooms/39214278?adults=7&check_in=2020-02-24&check_out=2020-02-25&source_impression_id=p3_1576003533_oSnjreMq64oVnCOo">Brighton Bed and Breakfast</a></p>
+							<p class="paragraph">To stay at our own Airbnb please visit our <a class="service" href="https://www.airbnb.co.uk/rooms/39214278?adults=7&check_in=2020-02-24&check_out=2020-02-25&source_impression_id=p3_1576003533_oSnjreMq64oVnCOo">Brighton Bed and Breakfast</a>
+
+							<br />
+							<br />
+							<!--Blinking text - advetisement.-->
+							<span id="blink" style="color: white;">Email us with code 'Christmas10' for 10% off (ends Jan 1).</span>
+
+							</p>
+
 
 							<!-- Gallery -->
 							<img name="slide" id="slide" />
@@ -112,6 +120,12 @@
 		// Run function when page loads
 		window.onload=changeImg;
 		// End of Script for picture rotation (airbnb).
+
+		//Blinking text - advetisement.
+		var blink = document.getElementById("blink");
+		setInterval(function() {
+			blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+		}, 2000);
 	</script>
 	<!-- end of Javascript-->
 

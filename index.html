@@ -91,41 +91,44 @@
 		var images = [];	// Images Array
 		var time = 5000;	// Time Between Switch
 
-		// Image List
-		images[0] = "./images/front.jpg";
-		images[1] = "./images/Living area.jpg";
-		images[2] = "./images/Kitchen 1.jpg";
-		images[3] = "./images/Master1.jpg";
-		images[4] = "./images/Day room 2.jpg";
-		images[5] = "./images/room 3.jpg";
-		images[6] = "./images/garden1.jpg";
-
-		// Change Image
+		// Change/rotate Image
 		function changeImg(){
 			document.slide.src = images[i];
 
 			// Check If Index Is Under Max
 			if(i < images.length - 1){
-			  // Add 1 to Index
-			  i++;
+				// Add 1 to Index
+				i++;
 			} else {
 				// Reset Back To O
 				i = 0;
 			}
-
 			// Run function every x seconds
 			setTimeout("changeImg()", time);
 		}
 
-		// Run function when page loads
-		window.onload=changeImg;
+		try{
+			// Image List
+			images[0] = "./images/front.jpg";
+			images[1] = "./images/Living area.jpg";
+			images[2] = "./images/Kitchen 1.jpg";
+			images[3] = "./images/Master1.jpg";
+			images[4] = "./images/Day room 2.jpg";
+			images[5] = "./images/room 3.jpg";
+			images[6] = "./images/garden1.jpg";
+		}catch{}
+		finally{
+			// Run function when page loads
+			window.onload=changeImg;
+		}
+
 		// End of Script for picture rotation (airbnb).
 
 		//Blinking text - advetisement.
 		var blink = document.getElementById("blink");
 		setInterval(function() {
 			blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
-		}, 2000);
+		}, time / 4);
 	</script>
 	<!-- end of Javascript-->
 
